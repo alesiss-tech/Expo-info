@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario de HTML y CSS</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="contenedor">
+    <header class="encabezado">
+      <span class="etiqueta">Actividad interactiva</span>
+      <h1>¿Cuánto sabes de HTML y CSS?</h1>
+      <p>Responde las 10 afirmaciones de verdadero o falso sobre la creación de páginas web.</p>
+    </header>
+
+    <section class="panel" id="panel">
+      <div class="progreso-info">
+        <span id="contador">Pregunta 1 de 10</span>
+        <span id="puntaje">Puntaje: 0</span>
+      </div>
+      <div class="barra"><div id="barraProgreso"></div></div>
+
+      <div id="zonaPregunta">
+        <span class="tema" id="tema">HTML</span>
+        <h2 id="pregunta">HTML se utiliza para organizar el contenido de una página web.</h2>
+        <div class="opciones">
+          <button class="opcion" data-respuesta="true">✓ Verdadero</button>
+          <button class="opcion" data-respuesta="false">✕ Falso</button>
+        </div>
+        <p id="retroalimentacion" class="retroalimentacion" aria-live="polite"></p>
+        <button id="siguiente" class="siguiente" disabled>Siguiente pregunta →</button>
+      </div>
+
+      <div id="resultado" class="resultado oculto" aria-live="polite">
+        <div class="icono-final">🎉</div>
+        <h2>¡Cuestionario terminado!</h2>
+        <p id="mensajeFinal"></p>
+        <p id="detalleFinal"></p>
+        <button id="reiniciar" class="siguiente">Volver a jugar ↻</button>
+      </div>
+    </section>
+    <footer>Proyecto escolar · HTML estructura · CSS diseño</footer>
+  </main>
+  <script src="preguntas.js"></script>
+</body>
+</html>
